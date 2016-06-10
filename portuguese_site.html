@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  <!-- for the tabs: -->
+  <script src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+  <!-- for start-up pop-up: -->
+
+
+<!-- for tooltip -->
+
+
+<link rel="stylesheet" href="mainstylesheet.css">
+  <title>Bem-Vindo a Casa Magica!</title>
+
+</head>
+
+
+
+<body id="container">
+  <div class="background">
+
+  <div id="boxes">
+  <div id="dialog" class="window" style="">
+  <h2> Bem-Vindo a Casa Magica Online!</h2> <br> <p style="text-align:left; font-family: Router-Book;">
+  O português em esta parte do site foi feito rapidamente. Quando eu tiver mais tempo, eu vou retornar e corrigir a gramática. <br> <br> Clique na cozinha para observar os itens necessários para fazer uma Simpatia ou navegar pelo catálogo de Simpatia por baixo.<br><br></p>
+  <a href="#" class="close" style="float:right; background-color:hotpink; border: solid hotpink 5px; border-radius:10px; color:white; padding:10px; font-family: Router-BoldItalic;"> Okay!</a>
+  </div>
+  <!-- Mask to cover the whole screen -->
+  <div style="width: 100%; height: 100%; display: none; opacity: 0.6;" id="mask"></div>
+  </div>
+
+
+<div id="tophalf">
+<div id="header">
+  <a href="index.html" style="text-decoration:none;"> <h1>casa– <br>
+      magica
+      .online</h1> </a>
+</div>
+
+<div class="kitchen_wrapper">
+<div id="unity">
+
+  <div class="itemCandles" candles-tooltip=" • Um par de velas brancas altas. Velas em simpatias representar sua devoção flamejante. Eles também são usados para chamar santos ou anjos específicos.">  </div>
+  <div class="itemHairbrush" hairbrush-tooltip="• Uma escova comum. O cabelo humano é usado para marcar a pessoa que um feitiço está sendo lançado por.">  </div>
+  <div class="itemHoney" honey-tooltip="• Uma jarra fechado de mel. Mel pode simbolizar doçura, mas também o trabalho interminável de abelhas.">  </div>
+  <div class="itemLove" love-tooltip="• Uma linda rosa em um vaso de vidro. Parece que veio do jardim. Flores são usadas em muitos feitiços que têm a ver com amor. Uma simpatia com uma planta bem cuidada pode significar que você também vai ser bem cuidada.">  </div>
+  <div class="itemMaria" maria-tooltip="• Esta é uma figurine da Nossa Senhora de Aparecida encontrados nos lares Brasileiros. Alguns feitiços de proteção em simpatias de pedir que você lançá-los à sua frente.">  </div>
+  <div class="itemPaper" paper-tooltip="• Um papel de computador. Cheira um pouco como perfume e tem um nome escrito muitas vezes ... O papel é usado em simpatias para escrever os desejos, nomes ou encantamentos para feitiços.">  </div>
+  <div class="itemPom" pom-tooltip="• Três romã brilhantes em uma bacia. Romãs e outras frutas com muitas sementes são usadas para representar abundância ou fertilidade.">  </div>
+  <div class="itemSalt" salt-tooltip="• Um prato raso de sal. O sal tem uma história de uso em rituais de depuraçao, proteção mágica, e bênção. É comum de colocar uma pitada de sal em cada canto de um quarto antes de realizar um feitiço.">  </div>
+  <div class="itemWater" water-tooltip="• Este é um filtro de cerâmica para a água. Quanto mais pura a água em simpatias, melhor, porque sybolizes água de limpeza e renovação.">  </div>
+  <div class="itemWealth" wealth-tooltip="• Uma pilha de moedas. Feitiços com pequena mudança pode representar o que você quer que aconteça com o resto do seu dinheiro.">  </div>
+  <div class="itemThankyouPics" thankyou-tooltip="• Algumas fotos de pessoas muito legal pendurar sobre esta geladeira: May, Sofi, Michael e Ryan !! Eu nunca teria chegou até aqui sem a ajuda de vocês. Obrigado !!! : -)">  </div>
+
+
+
+  <img src="images/FinalRoom.jpg" alt="unity player will go here" style="width: 1080px;height:600px;"></img>
+
+</div>
+</div>
+
+
+
+
+
+
+
+
+<div id="info"> <a style="text-decoration: none;" data-tooltip="Usando seu mouse, procure a sala para encontrar itens mágicos."><h6>?</h6></a>
+   </div>
+
+</div>
+
+
+<script type="text/javascript"> jQuery(document).ready(function() {
+    jQuery('.tabs .tab-links a').on('click', function(e)  {
+        var currentAttrValue = jQuery(this).attr('href');
+        // Show/Hide Tabs
+        jQuery('.tabs ' + currentAttrValue).show().siblings().hide();
+        // Change/remove current tab to active
+        jQuery(this).parent('li').addClass('active').siblings().removeClass('active');
+        e.preventDefault();
+    });
+});
+</script>
+
+<div id="simpatiaspells">
+
+
+
+<div class="tabs" style="">
+    <ul class="tab-links">
+        <li class="active"><a href="#tab1">Simpatias</a></li>
+        <li><a href="#tab2">Atração</a></li>
+        <li><a href="#tab3">Riqueza</a></li>
+        <li><a href="#tab4">Forças</a></li>
+    </ul>
+
+    <div class="tab-content">
+
+      <div id="tab1" class="tab active">
+
+        <div class="about_left">
+        <h5>O Que São Simpatias?</h5>
+        <p>Simpatia é uma superstição comum Brasileira nascida da mistura culturas, religiões e tradições ao longo de muitos anos. Hoje, ele é usado por muitos brasileiros, sem dar atenção ao que as suas origens são. É simplesmente algo que fazemos! Feitiços simpatia são expressos usando objetos do cotidiano que por causa de sua em qualidades simbólica becomimg fontes mágicas de poder que ajudar a canalizar os seus desejos. A parte mais importante do Simpatia é acreditar muito fortemente em seu resultado desejado. <br> </p>
+        </div>
+
+          <!-- <h5>How to Cast a Spell:</h5>
+      <p>To cast a spell: select a spell and read the description carefully. Simpatia is a magical force and you don't want to
+          cast the wrong one!  Sometimes there will be extra instructions like inputing a loved one's name or clicking to light
+          a candle. When you are ready, click “cast simpatia”. The spell will begin before your eyes. In the meantime, it is
+          important to think of what you wish to accomplish with this spell and believe in your goal. </p> -->
+        <div class="about_right">
+          <h5>Como Fazer um Simpatia:</h5>
+          <h3 style="margin-top:1px;"> 1. Escolhe uma Magia </h3>
+          <p style="margin-top:-5px;">Leia as descrições com cuidado. Simpatia é magia poderosa e você não quer lançar o errado! </p>
+          <h3> 2. Faça o seu pedido </h3>
+          <p style="margin-top:-5px;">Visualize-se conseguindo o que deseja do feitiço. </p>
+          <h3> 3. Assista o Ritual</h3>
+          <p style="margin-top:-5px;">O feitiço é lançado para você digitalmente para que não ha confusão envolvido e o chance de erros são minimizados! </p>
+          <br>
+        </div>
+
+        <div class="endquote"> Todos tem desejos secretos ... <br> Realize o seu hoje com a privacidade do seu próprio computador!
+        </div>
+
+    </div>
+
+
+
+    <div id="tab2" class="tab" >
+
+
+        <ul class="spells">
+        <div id="fade" class="black_overlay"></div>
+
+
+<!-- First Love Spell -->
+
+        <li>
+          <img class="SpellIcon" src="images/SweetLoveSpell_Icon.jpg" alt="the first spell will go here" data-itemName="sweet_love" />
+          <p>Sweet Love</p>
+
+          <div class="spell_popup sweet_love hidden">
+            <div class="inner">
+
+                      <a class="close" href="#"><h4>X</h4></a>
+
+
+                			<div id="SpellImage">
+                		    <img class="spellimage" src="animations/SweetLoveSpell.gif" alt="Sweet Love Preview" style="width:100%;height:auto;">
+                		  </div>
+
+                		    <div id="SpellCard">
+
+                		    <div id="SpellTitle">
+                          <!-- underline style="border-radius: 5px; height: 4px; width: 160px;box-shadow: 0 30px 0 0 #000;" -->
+                		      Sweet Love
+                        </div>
+
+                		    <div id="SpellHowTo">
+                		      <p style="margin-top:-8px;"> <br>
+                          Do you have a crush that just wont look <br> your way?
+                		      This spell is about trapping your loved one
+                          and enveloping them in sweetness!<br>
+                		      <br>
+                		      <b>Visualize the Ingredients: </b>
+                		      <br>
+                		        • Unopened Honey Jar<br>
+                		        • Slip of Pink Paper<br>
+                		        • Pen/Pencil<br>
+                          <br>
+                          <b>Enter Loved One's Name:</b>
+                          </p>
+                          <div id="CrushName" style="margin-top:-5px;">
+                            <form>
+                            <input type="text">
+                            </form>
+                          </div>
+
+                          <div class="CastButton" style="margin-top:80px;">
+                           Cast Simpatia!
+                          </div>
+
+                          <div class="animation_popup">
+                            <div class="animation-wrapper">
+                              <img class= "spell_gif" src="animations/SweetLoveAnimationPost.gif" alt="Casting Spell..." style="width:1000px; height:auto;">
+                            </div>
+                          <!-- insert spell content here / just change spell animation lol -->
+                          </div>
+                      </div>
+                  </div>
+                </div>
+            </div>
+        </li>
+
+
+
+<!-- Second Love Spell -->
+
+
+<li>
+  <img class="SpellIcon" src="images/MaximumPassion.png" alt="the second spell icon will go here" data-itemName="maximum_passion" />
+  <p>Maximum Passion</p>
+
+  <div class="spell_popup maximum_passion hidden">
+    <div class="inner">
+
+              <a class="close" href="#"><h4>X</h4></a>
+
+              <div id="SpellImage">
+                <img class="spellimage" src="animations/MaximumPassionSpell.gif" alt="Maximum Passion Preview" style="width:95%;height:auto;margin-left:-50px;">
+              </div>
+
+                <div id="SpellCard">
+
+                <div id="SpellTitle">
+                  Maximum Passion
+                </div>
+
+                <div id="SpellHowTo">
+                  <p>
+                  <br>
+                  This spell is very popular for its results are infallible!<br>
+                  Use it to spice things up!
+                  <br><br>
+                  <b>Visualize the Ingredients:</b>
+                  <br>
+                    • Your Underwear<br>
+                    • Needle and Red Thread<br>
+                    • Favorite Perfume or Cologne<br>
+                    • 3x4 Picture of your loved one<br>
+                  <br>
+                  </p>
+
+                  <div class="CastButton">
+                   Cast Simpatia
+                  </div>
+
+                  <div class="animation_popup">
+                    <div class="animation-wrapper">
+                      <img class= "spell_gif" src="animations/SweetLoveAnimationPost.gif" alt="Casting Spell...">
+                    </div>
+                  <!-- insert spell content here / just change spell animation lol -->
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+</li>
+
+
+<!-- Third Spell -->
+
+
+<li>
+  <img class="SpellIcon" src="images/FieryRomance.png" alt="the second spell icon will go here" data-itemName="fiery_romance" />
+  <p>Fiery Romance</p>
+
+  <div class="spell_popup fiery_romance hidden">
+    <div class="inner">
+
+              <a class="close" href="#"><h4>X</h4></a>
+
+              <div id="SpellImage">
+                <img class="spellimage" src="animations/FieryLoveSpell.gif" alt="Fiery Romance Preview" style="width:100%;height:auto;padding-top:20px;padding-right:20px;">
+              </div>
+
+                <div id="SpellCard">
+
+                <div id="SpellTitle">
+                  Fiery Romance
+                </div>
+
+                <div id="SpellHowTo">
+                  <p style="margin-top:-8px;">
+                  <br> Do you secretly burn for your crush but <br>
+                  are too shy to tell them? This spell will <br>
+                  make them run to your flame!
+                  <br><br>
+                  <b>1. Visualize the Ingredients:</b>
+                  <br>
+                    • Tall Candle<br>
+                    • Slip of Paper<br>
+                    • Glass of Water<br>
+                    • Pen/pencil<br>
+                  <br>
+                  <b>2. Write Crushes Name:</b> <br>
+                  <div id="CrushName" style="margin-top:-10px;">
+                    <form>
+                    <input type="text">
+                    </form>
+                  </div>
+                  <br>
+                  <a href="litcandle.html"  onclick="window.open('litcandle.html', 'newwindow', 'width=500, height=640'); return false;"><b> 3. Light the Candle </b></a>
+                  </p>
+
+                  <div class="CastButton">
+                   Cast Simpatia
+                  </div>
+
+                  <div class="animation_popup">
+                    <div class="animation-wrapper">
+                      <img class= "spell_gif" src="animations/SweetLoveAnimationPost.gif" alt="Casting Spell...">
+                    </div>
+                  <!-- insert spell content here / just change spell animation lol -->
+                  </div>
+                </div>
+            </div>
+          </div>
+        </div>
+</li>
+
+
+<!-- Fourth Spell -->
+
+
+      <li>
+        <img class="SpellIcon" src="images/comingsoon.png" alt="the fourth spell will go here">
+        <p>More Coming Soon!</p>
+      </li>
+
+        <!-- <li>
+        <img class="SpellIcon" src="images/Spell1.png" alt="the fifth spell will go here"> </img>
+        <p>Honey</p>
+        </li> -->
+
+        </ul>
+        </div>
+
+        <div id="tab3" class="tab">
+          <ul class="spells">
+            <li> <img class="SpellIcon" src="images/comingsoon.png" alt="the first spell will go here"> </img>
+            <p>Job Offer Charm</p>
+            </li>
+
+            <li> <img class="SpellIcon" src="images/comingsoon.png" alt="the second spell will go here"> </img>
+            <p>Never Ending Wallet</p>
+            </li>
+
+            <!-- <li> <img class="SpellIcon" src="images/Spell1.png" alt="the third spell will go here"> </img>
+            <p>Honey</p>
+            </li>
+
+            <li> <img class="SpellIcon" src="images/Spell1.png" alt="the fourth spell will go here"> </img>
+            <p>Honey</p>
+            </li>
+
+            <li> <img class="SpellIcon" src="images/Spell1.png" alt="the fifth spell will go here"> </img>
+            <p>Honey</p>
+            </li> -->
+
+          </ul>
+        </div>
+
+        <div id="tab4" class="tab">
+          <ul class="spells">
+            <li> <img class="SpellIcon" src="images/comingsoon.png" alt="the first spell will go here"> </img>
+            <p>Bring the Rain</p>
+            </li>
+
+            <li> <img class="SpellIcon" src="images/comingsoon.png" alt="the second spell will go here"> </img>
+            <p>New Year; New You</p>
+            </li>
+
+            <li> <img class="SpellIcon" src="images/comingsoon.png" alt="the third spell will go here"> </img>
+            <p>Luck Amplifier</p>
+            </li>
+
+            <!-- <li> <img class="SpellIcon" src="images/Spell1.png" alt="the fourth spell will go here"> </img>
+            <p>Honey</p>
+            </li>
+
+            <li> <img class="SpellIcon" src="images/Spell1.png" alt="the fifth spell will go here"> </img>
+            <p>Honey</p>
+            </li> -->
+
+          </ul>
+        </div>
+    </div>
+</div>
+</div>
+
+<div id="footer">
+
+  (c) Mila Nery 2016
+
+
+</div>
+
+
+
+
+
+</div>
+</body>
+</html>
+</html>
+
+<script type="text/javascript">
+  $(document).ready(function() {
+  		var id = '#dialog';
+  		//Get the screen height and width
+  		var maskHeight = $(document).height();
+  		var maskWidth = $(window).width();
+  		//Set heigth and width to mask to fill up the whole screen
+  		$('#mask').css({'width':maskWidth,'height':maskHeight});
+  		//transition effect
+  		$('#mask').fadeIn(200);
+  		$('#mask').fadeTo("slow",5);
+  		//Get the window height and width
+  		var winH = $(window).height();
+  		var winW = $(window).width();
+  		//Set the popup window to center
+  		$(id).css('top',  winH/2-$(id).height()/2);
+  		$(id).css('left', winW/2-$(id).width()/2);
+  		//transition effect
+  		$(id).fadeIn(2000);
+  	//if close button is clicked
+  	$('.window .close').click(function (e) {
+  		//Cancel the link behavior
+  		e.preventDefault();
+  		$('#mask').hide();
+  		$('.window').hide();
+  	});
+  	//if mask is clicked
+  	$('#mask').click(function () {
+  		$(this).hide();
+  		$('.window').hide();
+  	});
+  });
+
+
+  // popups!!!!!!
+
+// Love Spell 1 Card
+
+  // var LoveSpellCard1; //make a variable to hold the div once we find it
+  // function HideLoveSpellCard1 () {
+  //   LoveSpellCard1 = document.getElementById('spell_popup'); //find the div by its ID and assign it to the spellAnimation variable
+  //   LoveSpellCard1.classList.remove('overlay'); //remove the overlay class so we can apply a new one
+  //   LoveSpellCard1.classList.add('hidden'); //apply the hidden class so it disappears yay!
+  // }
+  //
+  //
+  //
+  // function ShowLoveSpellCard1 () {
+  //   spellAnimation = document.getElementById('spell_popup');
+  //   spellAnimation.classList.remove('hidden');
+  //   spellAnimation.classList.add('overlay');
+  // }
+
+$('.SpellIcon').click(function() {
+  var itemName = $(this).attr('data-itemName');
+  var showMe = '.spell_popup.' + itemName;
+  $(showMe).removeClass('hidden').addClass('overlay');
+})
+
+var hidePopup = function() {
+  return $('.spell_popup').removeClass('overlay').addClass('hidden');
+};
+
+
+$('.spell_popup .close').click(function(event) {
+  event.preventDefault;
+  hidePopup();
+})
+
+$('.CastButton').click(function() {
+  var clickedThing = $(this);
+
+  var effect = function() {
+    return clickedThing.next('.animation_popup').show( 1 ).delay( 13700 ).hide( 1 );
+  };
+
+
+  $.when( effect() ).done(function() {
+    hidePopup();
+  });
+});
+
+  // // Love Spell 1 Animation
+  //
+  // var spellAnimation; //make a variable to hold the div once we find it
+  // function HideLoveAnimation1 () {
+  //   spellAnimation = document.getElementById('LoveSpell1Animation'); //find the div by its ID and assign it to the spellAnimation variable
+  //   spellAnimation.classList.remove('LoveSpell1overlay'); //remove the overlay class so we can apply a new one
+  //   spellAnimation.classList.add('hidden'); //apply the hidden class so it disappears yay!
+  // }
+  //
+  //
+  //
+  // function ShowLoveAnimation1 () {
+  //   spellAnimation = document.getElementById('LoveSpell1Animation');
+  //   spellAnimation.classList.remove('hidden');
+  //   spellAnimation.classList.add('LoveSpell1overlay');
+  // }
+  //
+
+
+
+  </script>

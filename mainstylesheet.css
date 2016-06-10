@@ -1,0 +1,1523 @@
+html{
+  text-align:center
+}
+
+
+@font-face {
+    font-family: Router-BoldItalic;
+    src: url(fonts/Router-BoldItalic.otf);
+}
+
+@font-face {
+    font-family: Router-Bold;
+    src: url(fonts/Router-Bold.otf);
+}
+
+@font-face {
+    font-family: Router-Book;
+    src: url(fonts/Router-Book.otf);
+}
+
+
+#container {
+  background: rgba(255,252,240,1);
+  background: -moz-linear-gradient(top, rgba(255,252,240,1) 0%, rgba(255,219,199,1) 39%, rgba(255,138,167,1) 100%);
+  background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(255,252,240,1)), color-stop(39%, rgba(255,219,199,1)), color-stop(100%, rgba(255,138,167,1)));
+  background: -webkit-linear-gradient(top, rgba(255,252,240,1) 0%, rgba(255,219,199,1) 39%, rgba(255,138,167,1) 100%);
+  background: -o-linear-gradient(top, rgba(255,252,240,1) 0%, rgba(255,219,199,1) 39%, rgba(255,138,167,1) 100%);
+  background: -ms-linear-gradient(top, rgba(255,252,240,1) 0%, rgba(255,219,199,1) 39%, rgba(255,138,167,1) 100%);
+  background: linear-gradient(to bottom, rgba(255,252,240,1) 0%, rgba(255,219,199,1) 39%, rgba(255,138,167,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fffcf0', endColorstr='#ff8aa7', GradientType=0 );
+  height: 100%;
+  margin: 0;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+
+h1 {
+  font-family: Router-BoldItalic;
+  font-size: 40px;
+  color: black;
+
+}
+
+h1:hover {
+    color: pink;
+
+}
+
+h2 {
+  font-family: Router-Bold;
+  /*font-weight: 900;*/
+  color: black;
+}
+
+h3 {
+  font-size:16px;
+  font-family: Router-Bold;
+  color:black;
+  line-height: 14px;
+}
+
+h4 {
+  float:right;
+  text-decoration:none;
+  font-size:24px;
+  font-family: Router-Bold;
+  color:black;
+  padding-right: 5px;
+}
+
+h4:hover{
+  color:pink;
+}
+
+h5 {
+  font-family: Router-Bold;
+  font-style: bold;
+  color:black;
+  font-size: 26px;
+  line-height: normal;
+}
+
+h6 {
+  font-family: Router-Bold;
+  font-style: bold;
+  color:black;
+  font-size: 25px;
+}
+
+h6:hover{
+  color:pink;
+}
+
+
+p {
+  font-size: 15.5px;
+
+}
+
+.background {
+  background-image: url(images/footer1.png);
+  background-repeat: repeat-x;
+  background-attachment: fixed;
+  background-position: bottom;
+  background-size: 40%;
+  bottom:0;
+  left:0;
+  z-index: -2;
+}
+
+
+#mask {
+  position:fixed;
+  left:0;
+  top:0;
+  right:0;
+  z-index:9000;
+  background-color:rgba(255, 252, 132, 0.65);
+  display:none;
+}
+#boxes .window {
+  position:fixed;
+  /*left:50%;*/
+  /*top:50%;*/
+  width:430px;
+  height:440px;
+  display:none;
+  border-style: solid;
+  border-width: 5px;
+  border-radius: 5px;
+  border-color: black;
+  box-shadow:-6px 6px rgba(0,0,0,0.15);
+  z-index:9999;
+}
+
+#boxes #dialog {
+
+  /*width:400px;*/
+  /*height:400px;*/
+  padding:40px;
+  background-color:white;
+}
+
+#tophalf {
+  display:inline-block;
+  position: relative;
+}
+
+
+#header {
+  width: 200px;
+  height: 200px;
+  padding: 12px;
+  padding-left: 28px;
+  margin-top: 50px;
+  margin-left: -70px;
+  border: 4px solid black;
+  border-radius: 5px;
+  background-color: white;
+  box-shadow:-5px 5px rgba(0,0,0,0.15);
+  position: fixed;
+  text-align: left;
+  z-index: 1000;
+}
+
+.kitchen_wrapper{
+  margin-top: 100px;
+  margin-bottom: 30px;
+  border: 4px solid black;
+  border-radius: 5px;
+  background-color: white;
+  box-shadow:-5px 5px  rgba(0,0,0,0.15);
+  /*z-index: -1;*/
+  /*width: 1080px;*/
+  overflow: hidden;
+  /*display:inline-block;*/
+}
+
+#unity {
+  /*margin-top: 100px;
+  margin-bottom: 30px;
+  border: 4px solid black;
+  border-radius: 5px;
+  background-color: white;
+  box-shadow:-5px 5px  rgba(0,0,0,0.15);
+  z-index: -1;
+  width: 1080px;
+  overflow-x: hidden;
+  display:inline-block;*/
+
+}
+
+
+/*---------------------------------- item = candles ----------------------------------------------*/
+
+
+
+.itemCandles {
+  background-image: url(images/itemCandles.png);
+  background-size: contain;
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  margin-top: 83px;
+  left:255px;
+  cursor: pointer;
+}
+
+.itemCandles:hover {
+  background-image: url(images/itemCandlesglow.png);
+  cursor: pointer;
+}
+
+[candles-tooltip] {
+  position: absolute;
+  z-index: 100;
+}
+
+/* Hide the tooltip content by default */
+[candles-tooltip]:before,
+[candles-tooltip]:after {
+  visibility: hidden;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  opacity: 0;
+  text-decoration: none;
+}
+
+/* Position tooltip above the element */
+[candles-tooltip]:before{
+  text-decoration: none;
+  position: absolute;
+  z-index: 1000;
+  cursor: pointer;
+  padding: 15px;
+  width: 305px;
+  left: -235px;
+  top: 388px;
+
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-style: solid;
+  border-width: 3px;
+  border-radius: 5px;
+  background-color: white;
+  box-shadow:-5px 5px  rgba(0,0,0,0.15);
+
+  color: black;
+  content: attr(candles-tooltip);
+  text-align: left;
+  font-family: Router-book;
+  font-size: 15px;
+  line-height: 1.3;
+  filter: drop-shadow(transparent);
+}
+
+
+/* Show tooltip content on hover */
+[candles-tooltip]:hover:before,
+[candles-tooltip]:hover:after {
+  text-decoration: none;
+  visibility: visible;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+  opacity: 1;
+  cursor: pointer;
+
+
+}
+
+/*---------------------------------- item = hairbrush ----------------------------------------------*/
+
+
+.itemHairbrush {
+  background-image: url(images/itemHairbrush.png);
+  background-size: contain;
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  margin-top: 330px;
+  left:260px;
+  cursor: pointer;
+}
+
+.itemHairbrush:hover {
+  background-image: url(images/itemHairbrushglow.png);
+  cursor: pointer;
+}
+
+[hairbrush-tooltip] {
+  position: absolute;
+  z-index: 100;
+}
+
+/* Hide the tooltip content by default */
+[hairbrush-tooltip]:before,
+[hairbrush-tooltip]:after {
+  visibility: hidden;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  opacity: 0;
+  text-decoration: none;
+}
+
+/* Position tooltip above the element */
+[hairbrush-tooltip]:before {
+  text-decoration: none;
+  position: absolute;
+  cursor: pointer;
+  padding: 15px;
+  width: 305px;
+  left: -239px;
+  top: 160px;
+
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-style: solid;
+  border-width: 3px;
+  border-radius: 5px;
+  background-color: white;
+  box-shadow:-5px 5px  rgba(0,0,0,0.15);
+
+
+  color: black;
+  content: attr(hairbrush-tooltip);
+  text-align: left;
+  font-family: Router-book;
+  font-size: 15px;
+  line-height: 1.3;
+}
+
+/* Show tooltip content on hover */
+[hairbrush-tooltip]:hover:before,
+[hairbrush-tooltip]:hover:after {
+  text-decoration: none;
+  visibility: visible;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+  opacity: 1;
+  cursor: pointer;
+
+}
+
+/*---------------------------------- item = honey ----------------------------------------------*/
+
+.itemHoney {
+  background-image: url(images/itemHoney.png);
+  background-size: contain;
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  margin-top: 340px;
+  left:870px;
+  cursor: pointer;
+}
+
+.itemHoney:hover {
+  background-image: url(images/itemHoneyglow.png);
+  cursor: pointer;
+}
+
+[honey-tooltip] {
+  position: absolute;
+  z-index: 100;
+
+}
+
+/* Hide the tooltip content by default */
+[honey-tooltip]:before,
+[honey-tooltip]:after {
+  visibility: hidden;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  opacity: 0;
+  text-decoration: none;
+}
+
+/* Position tooltip above the element */
+[honey-tooltip]:before {
+  text-decoration: none;
+  position: absolute;
+  cursor: pointer;
+  padding: 15px;
+  width: 305px;
+  left: -849px;
+  top: 150px;
+
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-style: solid;
+  border-width: 3px;
+  border-radius: 5px;
+  background-color: white;
+  box-shadow:-5px 5px  rgba(0,0,0,0.15);
+
+
+  color: black;
+  content: attr(honey-tooltip);
+  text-align: left;
+  font-family: Router-book;
+  font-size: 15px;
+  line-height: 1.3;
+}
+
+/* Show tooltip content on hover */
+[honey-tooltip]:hover:before,
+[honey-tooltip]:hover:after {
+  text-decoration: none;
+  visibility: visible;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+  opacity: 1;
+  cursor: pointer;
+
+}
+
+
+/*---------------------------------- item = love ----------------------------------------------*/
+
+.itemLove {
+  background-image: url(images/itemLove.png);
+  background-size: contain;
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  margin-top: 280px;
+  left:480px;
+  cursor: pointer;
+}
+
+.itemLove:hover {
+  background-image: url(images/itemLoveglow.png);
+  cursor: pointer;
+}
+
+[love-tooltip] {
+  position: absolute;
+  z-index: 100;
+
+}
+
+/* Hide the tooltip content by default */
+[love-tooltip]:before,
+[love-tooltip]:after {
+  visibility: hidden;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  opacity: 0;
+  text-decoration: none;
+}
+
+/* Position tooltip above the element */
+[love-tooltip]:before {
+  text-decoration: none;
+  position: absolute;
+  cursor: pointer;
+  padding: 15px;
+  width: 305px;
+  left: -460px;
+  top: 152px;
+
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-style: solid;
+  border-width: 3px;
+  border-radius: 5px;
+  background-color: white;
+  box-shadow:-5px 5px  rgba(0,0,0,0.15);
+
+
+  color: black;
+  content: attr(love-tooltip);
+  text-align: left;
+  font-family: Router-book;
+  font-size: 15px;
+  line-height: 1.3;
+}
+
+/* Show tooltip content on hover */
+[love-tooltip]:hover:before,
+[love-tooltip]:hover:after {
+  text-decoration: none;
+  visibility: visible;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+  opacity: 1;
+  cursor: pointer;
+
+}
+
+/*---------------------------------- item = maria ----------------------------------------------*/
+
+.itemMaria {
+  background-image: url(images/itemMaria.png);
+  background-size: contain;
+  width: 80px;
+  height: 80px;
+  position: absolute;
+  margin-top: 95px;
+  left:265px;
+  cursor: pointer;
+}
+
+.itemMaria:hover {
+  background-image: url(images/itemMariaglow.png);
+  cursor: pointer;
+}
+
+[maria-tooltip] {
+  position: absolute;
+  z-index: 100;
+
+}
+
+/* Hide the tooltip content by default */
+[maria-tooltip]:before,
+[maria-tooltip]:after {
+  visibility: hidden;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  opacity: 0;
+  text-decoration: none;
+}
+
+/* Position tooltip above the element */
+[maria-tooltip]:before {
+  text-decoration: none;
+  position: absolute;
+  /*z-index: 1000;*/
+  cursor: pointer;
+  /*bottom: -15px;*/
+  padding: 15px;
+  width: 305px;
+  left: -245px;
+  top: 358px;
+
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-style: solid;
+  border-width: 3px;
+  border-radius: 5px;
+  background-color: white;
+  box-shadow:-5px 5px  rgba(0,0,0,0.15);
+
+
+  color: black;
+  content: attr(maria-tooltip);
+  text-align: left;
+  font-family: Router-book;
+  font-size: 15px;
+  line-height: 1.3;
+}
+
+/* Show tooltip content on hover */
+[maria-tooltip]:hover:before,
+[maria-tooltip]:hover:after {
+  text-decoration: none;
+  visibility: visible;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+  opacity: 1;
+  cursor: pointer;
+
+}
+
+/*---------------------------------- item = paper ----------------------------------------------*/
+
+.itemPaper {
+  background-image: url(images/itemPaper.png);
+  background-size: contain;
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  margin-top: 340px;
+  left:565px;
+  cursor: pointer;
+}
+
+.itemPaper:hover {
+  background-image: url(images/itemPaperglow.png);
+  cursor: pointer;
+}
+
+[paper-tooltip] {
+  position: absolute;
+  z-index: 100;
+
+}
+
+/* Hide the tooltip content by default */
+[paper-tooltip]:before,
+[paper-tooltip]:after {
+  visibility: hidden;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  opacity: 0;
+  text-decoration: none;
+}
+
+/* Position tooltip above the element */
+[paper-tooltip]:before {
+  text-decoration: none;
+  position: absolute;
+  cursor: pointer;
+  padding: 15px;
+  width: 305px;
+  left: -542px;
+  top: 112px;
+
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-style: solid;
+  border-width: 3px;
+  border-radius: 5px;
+  background-color: white;
+  box-shadow:-5px 5px  rgba(0,0,0,0.15);
+
+
+  color: black;
+  content: attr(paper-tooltip);
+  text-align: left;
+  font-family: Router-book;
+  font-size: 15px;
+  line-height: 1.3;
+}
+
+/* Show tooltip content on hover */
+[paper-tooltip]:hover:before,
+[paper-tooltip]:hover:after {
+  text-decoration: none;
+  visibility: visible;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+  opacity: 1;
+  cursor: pointer;
+
+}
+
+
+/*---------------------------------- item = pom ----------------------------------------------*/
+
+.itemPom {
+  background-image: url(images/itemPom.png);
+  background-size: contain;
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  margin-top: 225px;
+  left:288px;
+  cursor: pointer;
+}
+
+.itemPom:hover {
+  background-image: url(images/itemPomglow.png);
+  cursor: pointer;
+}
+
+[pom-tooltip] {
+  position: absolute;
+  z-index: 100;
+
+}
+
+/* Hide the tooltip content by default */
+[pom-tooltip]:before,
+[pom-tooltip]:after {
+  visibility: hidden;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  opacity: 0;
+  text-decoration: none;
+}
+
+/* Position tooltip above the element */
+[pom-tooltip]:before {
+  text-decoration: none;
+  position: absolute;
+  /*z-index: 1000;*/
+  cursor: pointer;
+  /*bottom: -15px;*/
+  padding: 15px;
+  width: 305px;
+  left: -267px;
+  top: 245px;
+
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-style: solid;
+  border-width: 3px;
+  border-radius: 5px;
+  background-color: white;
+  box-shadow:-5px 5px  rgba(0,0,0,0.15);
+
+
+  color: black;
+  content: attr(pom-tooltip);
+  text-align: left;
+  font-family: Router-book;
+  font-size: 15px;
+  line-height: 1.3;
+}
+
+/* Show tooltip content on hover */
+[pom-tooltip]:hover:before,
+[pom-tooltip]:hover:after {
+  text-decoration: none;
+  visibility: visible;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+  opacity: 1;
+  cursor: pointer;
+
+}
+
+
+/*---------------------------------- item = salt ----------------------------------------------*/
+
+.itemSalt {
+  background-image: url(images/itemSalt.png);
+  background-size: contain;
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  margin-top: 259px;
+  left:854px;
+  cursor: pointer;
+}
+
+.itemSalt:hover {
+  background-image: url(images/itemSaltglow.png);
+  cursor: pointer;
+}
+
+[salt-tooltip] {
+  position: absolute;
+  z-index: 100;
+
+}
+
+/* Hide the tooltip content by default */
+[salt-tooltip]:before,
+[salt-tooltip]:after {
+  visibility: hidden;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  opacity: 0;
+  text-decoration: none;
+}
+
+/* Position tooltip above the element */
+[salt-tooltip]:before {
+  text-decoration: none;
+  position: absolute;
+  /*z-index: 1000;*/
+  cursor: pointer;
+  /*bottom: -15px;*/
+  padding: 15px;
+  width: 305px;
+  left: -833px;
+  top: 173px;
+
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-style: solid;
+  border-width: 3px;
+  border-radius: 5px;
+  background-color: white;
+  box-shadow:-5px 5px  rgba(0,0,0,0.15);
+
+
+  color: black;
+  content: attr(salt-tooltip);
+  text-align: left;
+  font-family: Router-book;
+  font-size: 15px;
+  line-height: 1.3;
+}
+
+/* Show tooltip content on hover */
+[salt-tooltip]:hover:before,
+[salt-tooltip]:hover:after {
+  text-decoration: none;
+  visibility: visible;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+  opacity: 1;
+  cursor: pointer;
+
+}
+
+
+/*---------------------------------- item = water ----------------------------------------------*/
+
+.itemWater {
+  background-image: url(images/itemWater.png);
+  background-size: contain;
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  margin-top: 178px;
+  left:500px;
+  cursor: pointer;
+}
+
+.itemWater:hover {
+  background-image: url(images/itemWaterglow.png);
+  cursor: pointer;
+}
+
+[water-tooltip] {
+  position: absolute;
+  z-index: 100;
+
+}
+
+/* Hide the tooltip content by default */
+[water-tooltip]:before,
+[water-tooltip]:after {
+  visibility: hidden;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  opacity: 0;
+  text-decoration: none;
+}
+
+/* Position tooltip above the element */
+[water-tooltip]:before {
+  text-decoration: none;
+  position: absolute;
+  /*z-index: 1000;*/
+  cursor: pointer;
+  /*bottom: -15px;*/
+  padding: 15px;
+  width: 305px;
+  left: -480px;
+  top: 292px;
+
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-style: solid;
+  border-width: 3px;
+  border-radius: 5px;
+  background-color: white;
+  box-shadow:-5px 5px  rgba(0,0,0,0.15);
+
+
+  color: black;
+  content: attr(water-tooltip);
+  text-align: left;
+  font-family: Router-book;
+  font-size: 15px;
+  line-height: 1.3;
+}
+
+/* Show tooltip content on hover */
+[water-tooltip]:hover:before,
+[water-tooltip]:hover:after {
+  text-decoration: none;
+  visibility: visible;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+  opacity: 1;
+  cursor: pointer;
+
+}
+
+
+/*---------------------------------- item = wealth ----------------------------------------------*/
+
+.itemWealth {
+  background-image: url(images/itemWealth.png);
+  background-size: contain;
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  margin-top: 330px;
+  left:400px;
+  cursor: pointer;
+}
+
+.itemWealth:hover {
+  background-image: url(images/itemWealthglow.png);
+  cursor: pointer;
+}
+
+[wealth-tooltip] {
+  position: absolute;
+  z-index: 100;
+
+}
+
+/* Hide the tooltip content by default */
+[wealth-tooltip]:before,
+[wealth-tooltip]:after {
+  visibility: hidden;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  opacity: 0;
+  text-decoration: none;
+}
+
+/* Position tooltip above the element */
+[wealth-tooltip]:before {
+  text-decoration: none;
+  position: absolute;
+  cursor: pointer;
+  padding: 15px;
+  width: 305px;
+  left: -380px;
+  top: 140px;
+
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-style: solid;
+  border-width: 3px;
+  border-radius: 5px;
+  background-color: white;
+  box-shadow:-5px 5px  rgba(0,0,0,0.15);
+
+
+  color: black;
+  content: attr(wealth-tooltip);
+  text-align: left;
+  font-family: Router-book;
+  font-size: 15px;
+  line-height: 1.3;
+}
+
+/* Show tooltip content on hover */
+[wealth-tooltip]:hover:before,
+[wealth-tooltip]:hover:after {
+  text-decoration: none;
+  visibility: visible;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+  opacity: 1;
+  cursor: pointer;
+
+}
+
+
+/*---------------------------------- item = thankyou ----------------------------------------------*/
+
+.itemThankyouPics {
+  background-image: url(images/itemThankyouPics.png);
+  background-size: contain;
+  width: 150px;
+  height: 150px;
+  position: absolute;
+  margin-top: 145px;
+  left:102px;
+  cursor: pointer;
+}
+
+.itemThankyouPics:hover {
+  background-image: url(images/itemThankyouPicsglow.png);
+  cursor: pointer;
+}
+
+[thankyou-tooltip] {
+  position: absolute;
+  z-index: 100;
+
+}
+
+/* Hide the tooltip content by default */
+[thankyou-tooltip]:before,
+[thankyou-tooltip]:after {
+  visibility: hidden;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  opacity: 0;
+  text-decoration: none;
+}
+
+/* Position tooltip above the element */
+[thankyou-tooltip]:before {
+  text-decoration: none;
+  position: absolute;
+  cursor: pointer;
+  padding: 15px;
+  width: 305px;
+  left: -83px;
+  top: 310px;
+
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-style: solid;
+  border-width: 3px;
+  border-radius: 5px;
+  background-color: white;
+  box-shadow:-5px 5px  rgba(0,0,0,0.15);
+
+
+  color: black;
+  content: attr(thankyou-tooltip);
+  text-align: left;
+  font-family: Router-book;
+  font-size: 15px;
+  line-height: 1.3;
+}
+
+/* Show tooltip content on hover */
+[thankyou-tooltip]:hover:before,
+[thankyou-tooltip]:hover:after {
+  text-decoration: none;
+  visibility: visible;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+  opacity: 1;
+  cursor: pointer;
+
+}
+
+
+
+/*---------------------------------------------------------------*/
+
+#info {
+  position: absolute;
+  float: right;
+  width: 55px;
+  height: 55px;
+  margin-top: -60px;
+  margin-left: 1060px;
+  border: 4px solid black;
+  border-radius: 5px;
+  background-color: white;
+  z-index: 1;
+  box-shadow:-5px 5px  rgba(0,0,0,0.15);
+  padding-top: 2px;
+}
+
+#info p:hover {
+  color:pink;
+}
+
+
+[data-tooltip] {
+  position: relative;
+  z-index: 2;
+  cursor: pointer;
+}
+
+/* Hide the tooltip content by default */
+[data-tooltip]:before,
+[data-tooltip]:after {
+  visibility: hidden;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  /*filter: progid: DXImageTransform.Microsoft.Alpha(Opacity=0);*/
+  opacity: 0;
+  pointer-events: none;
+  text-decoration: none;
+}
+
+/* Position tooltip above the element */
+[data-tooltip]:before {
+  text-decoration: none;
+  position: absolute;
+  bottom: -15px;
+  padding: 15px;
+  width: 155px;
+  left: 5px;
+ -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-style: solid;
+  border-width: 4px;
+  border-radius: 5px;
+  background-color: white;
+  color: black;
+  content: attr(data-tooltip);
+  text-align: left;
+  font-family: Router-Bold;
+  font-size: 13px;
+  line-height: 1.3;
+}
+
+/* Show tooltip content on hover */
+[data-tooltip]:hover:before,
+[data-tooltip]:hover:after {
+  text-decoration: none;
+  visibility: visible;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+  /*filter: progid: DXImageTransform.Microsoft.Alpha(Opacity=100);*/
+  opacity: 1;
+}
+
+
+
+    /*----- Bottom Half -----*/
+
+#simpatiaspells {
+  z-index: 2;
+}
+
+
+.about_left{
+  display: block;
+  width: 46%;
+  float: left;
+}
+
+.about_right{
+  display: block;
+  width: 46%;
+  float: right;
+  line-height: 18px;
+}
+
+.endquote {
+  font-family: Router-BoldItalic;
+  color: lightpink;
+  overflow: hidden;
+  font-size: 22px;
+  margin-top: 20px;
+  display: inline-block;
+  width: 100%;
+  float: center;
+  text-align: center;
+}
+
+    /*---- box of spells ----*/
+
+.tabs {
+    width:1161px;
+    display:inline-block;
+    /*z-index: 100;*/
+    /*position: absolute;*/
+
+}
+
+    /*----- Tab Links -----*/
+    /* Clearfix */
+.tab-links:after {
+        display:block;
+        clear:both;
+        content:'';
+
+
+    }
+
+.tab-links li {
+        position: relative;
+        margin: 0px 15px;
+        float:left;
+        list-style:none;
+        margin-bottom: -14px;
+        background-color: #c1ebeb;
+
+        border-style: solid;
+        border-width: 4px;
+        border-color: black;
+        border-top-right-radius: 5px;
+        border-top-left-radius: 5px;
+
+
+    }
+
+.tab-links a {
+            padding:9px 15px ;
+            display:inline-block;
+            /*border-top-right-radius: 15px;*/
+            /*border-top-left-radius: 15px;*/
+            /*border-radius:25px 25px 25px 25px;*/
+            /*background:white;*/
+            /*border-bottom-color: white;*/
+            font-size:18.5px;
+            font-family: Router-Bold;
+            /*font-weight:900;*/
+            font-style: normal;
+            color: black;
+
+            border-bottom-color: white;
+            /*border-bottom: 4px;
+            border-bottom-style: solid;*/
+
+            /*transition:all linear 0.15s;*/
+            }
+
+.tab-links a:hover {
+        color:white;
+        text-decoration: none;
+
+        border-bottom-color: white;
+        }
+
+li.active a, li.active a:hover {
+        position: relative;
+        font-family: Router-Bold;
+        /*font-weight: 900;*/
+        font-weight: bold;
+        font-style: normal;
+        color: pink;
+        background-color: white;
+        border-bottom: 0;
+        text-decoration: none;
+
+        border-bottom-color: white;
+
+
+        }
+
+li.active {
+  border-style:solid;
+  border-bottom-color: white;
+}
+
+
+li.active a:hover {
+  color: pink;
+  }
+
+    /*----- Content of Tabs -----*/
+.tab-content {
+      border-style: solid;
+      border-color: black;
+      border-width: 4px;
+      border-radius:5px;
+      box-shadow:-5px 5px  rgba(0,0,0,0.15);
+      /*background-color: red;*/
+      display: inline-block;
+
+      height: 460px;
+      width: 1080px;
+      margin-bottom: 40px;
+      background:#fff;
+      font-family: Router-Book;
+      font-style: normal;
+      font-weight: normal;
+      overflow: scroll;
+
+    }
+
+
+.tab {
+      display:none;
+        }
+
+.tab.active {
+      display:block;
+        }
+
+#tab1{
+    text-align: left;
+    padding-top: 6%;
+    /*padding-bottom: 8%;*/
+    padding-left: 9%;
+    padding-right: 9%;
+    font-size: 15.5px;
+    font-family: Router-Book;
+    height: 400px;
+    overflow: hidden;
+
+
+}
+
+ul.spells{
+    padding:50px;
+    text-align: left;
+    list-style: none;
+    font-size: 0px;
+    margin-top: 30px;
+    /*margin-left: -50px;*/
+
+}
+
+
+
+ul.spells li {
+	display: inline-block;
+	margin: 0 0 9% 9%;
+	background:white;
+	font-size: 16px;
+  font-family: Router-Book;
+	vertical-align: top;
+  /*cursor: pointer;*/
+  text-align: center;
+  /*border: 3px solid black;
+  border-radius: 5px;
+	box-shadow: 0 0 5px #ddd;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;*/
+}
+ul.spells li .SpellIcon {
+	max-width: 200px;
+	height: auto;
+  cursor: pointer;
+	/*margin: 0 0 10px;*/
+}
+ul.spells li h3 {
+	margin: 0 0 5px;
+}
+ul.spells li p {
+  position: relative;
+  padding-top: 10px;
+	font-size: 1em;
+	line-height: 1.5em;
+	color: black;
+}
+/* class for 2 columns
+ul.spells.columns-2 li {
+	width: 47.5%; /* this value + 2.5 should = 50% */
+/*}*/
+
+/* class for 3 columns */
+/*ul.spells.columns-3 li {
+	width: 30.83%; /* this value + 2.5 should = 33% */
+/*}*/
+
+/*class for 4 columns*/
+ul.spells.columns-4 li {
+	width: 22.5%; /* this value + 2.5 should = 25% */
+}
+
+@media (max-width: 480px) {
+	ul.grid-nav li {
+		display: block;
+		margin: 0 0 5px;
+	}
+	ul.grid-nav li a {
+		display: block;
+	}
+	ul.spells {
+		margin-left: 0;
+	}
+	ul.spells li {
+		width: 100% !important; /* over-ride all li styles */
+		margin: 0 0 20px;
+	}
+}
+
+.SpellIcon:hover {
+
+    border: 3px solid pink;
+    border-radius: 5px;
+    vertical-align: top;
+}
+
+.SpellIcon{
+  border: 3px solid black;
+  border-radius: 5px;
+	box-shadow: 0 0 5px #ddd;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+}
+
+
+/*---- Lightbox for Spells ----*/
+
+
+
+
+.spell_popup .inner {
+    position: fixed;
+    left: 50%;
+    top: 51%;
+    margin-left: -370px;
+    margin-top: -257.5px;
+
+    width:740px;
+    height: 515px;
+
+    padding: 16px;
+    border: 4px solid black;
+    border-radius: 5px;
+    background-color: white;
+    box-shadow:-5px 5px rgba(0,0,0,0.15);
+
+  }
+
+
+
+.animation-wrapper {
+  position: absolute;
+  display: inline-block;
+  /*top: 25.5%;
+  left: 25%;*/
+  width: 1000px;
+  height: 530px;
+
+  left: 50%;
+  top: 50%;
+
+  margin-left: -500px;
+  margin-top: -250px;
+
+  border: 4px solid black;
+  border-radius: 5px;
+  background-color: white;
+  box-shadow:-5px 5px rgba(0,0,0,0.15);
+  overflow: hidden;
+
+  /*margin-left: 540px;
+  margin-top: 300px;*/
+
+}
+
+
+
+
+#SpellImage{
+  display: block;
+  float: left;
+  /*padding: 10px;*/
+  /*border-style: solid;
+  border-radius: 5px;*/
+  width: 350px;
+  height: 400px;
+  margin-top: 23px;
+  margin-left: 23px;
+  /*overflow: hidden;*/
+
+
+}
+
+
+
+#SpellCard{
+  position: absolute;
+  display: block;
+  float: right;
+  padding-right: 10%;
+  margin-top: 35px;
+  margin-left: 50%;
+
+
+}
+
+#SpellTitle{
+  font-family: Router-Bold;
+  color:black;
+  font-size: 30px;
+  text-align: left;
+  position: fixed;
+/*-----underline------*/
+  /*border-radius: 5px; height: 4px; width: 160px;box-shadow: 0 30px 0 0 #000;*/
+
+}
+
+
+#SpellHowTo{
+  width: 320px;
+  padding-top: 20px;
+  font-family: Router-Book;
+  font-size: 15px;
+  text-align: left;
+  /*background: red;*/
+  line-height: 1.5;
+  padding-right: 20px;
+}
+
+
+.CastButton {
+  position: absolute;
+  background-color: black;
+  border: solid black 4px;
+  border-radius:20px;
+  color:white;
+  /*padding:10px; */
+  font-family: Router-BoldItalic;
+
+  /*display: block;*/
+  width: 210px;
+  height: 55px;
+  /*background-color: black;*/
+  /*border-width: 5px;
+  border-radius: 25px;*/
+  /*top: 60%;*/
+  /*padding-bottom: 60px;*/
+  padding: 8px 0px 0px;
+  text-decoration:none;
+  color:white;
+  /*font-family: Router-BoldItalic;*/
+  font-size: 23px;
+  text-align: center;
+  cursor: pointer;
+  /*margin-top: 410px;
+  margin-left: 370px;*/
+}
+
+.CastButton:hover {
+  background-color: #c1ebeb;
+  border-color: black;
+  color: black;
+}
+
+.overlay {
+  background-color: rgba(255, 252, 132, 0.65);
+}
+
+.overlay,
+.animation_popup {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  display: block;
+  z-index: 2000;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  /*cursor: pointer;*/
+}
+
+.animation_popup,
+.hidden {
+  display: none;
+
+}
+
+.animation_popup {
+  z-index: 3000;
+
+}
+
+.spell_gif {
+  /*width: 1000px;
+  height: 600px;*/
+  z-index: 10000;
+  cursor: progress;
+
+}
+
+
+
+#footer{
+    background-image: url(images/footer2.png);
+    background-repeat: repeat-x;
+    background-position: bottom;
+    background-size: 68%;
+
+    width: 100%;
+    height: 540px;
+    padding-top: 480px;
+    /*z-index: 1;*/
+    overflow: hidden;
+    margin-top: -480px;
+
+    font-family: Router-Book;
+    font-size: 14px;
+    color:white;
+  }
